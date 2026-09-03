@@ -27,17 +27,14 @@
   <!-- 2. Tokens da sua carta -->
   <style type="text/tailwindcss">
     @theme {
-      /* Os três hex vêm da sua carta. Decida qual é fundo, qual é tinta e qual é destaque. */
-      --color-marca-50:  #FFFFFF;   /* fundo    — TROQUE */
-      --color-marca-900: #111111;   /* tinta    — TROQUE */
-      --color-marca-500: #2563EB;   /* destaque — TROQUE */
+      --color-marca-50:  #FFFFFF;
+      --color-marca-900: #111111;
+      --color-marca-500: #2563EB;
 
-      /* O par tipográfico da sua carta. */
-      --font-display: system-ui, Bangers;   /* TROQUE */
-      --font-corpo:   system-ui, Nunito Sans;   /* TROQUE */
+      --font-display: "Bangers", system-ui, sans-serif;
+      --font-corpo:   "Nunito Sans", system-ui, sans-serif;
 
-      /* O raio de canto da sua carta. */
-      --radius-card: 12px;            /* TROQUE */
+      --radius-card: 12px;
     }
   </style>
 
@@ -49,16 +46,16 @@
 
 <body>
 
-  <header id="topo">
-    <a href="#hero">Nome do Evento</a>
+  <header id="topo" class="fixed top-0 w-full bg-marca-50/90 backdrop-blur flex flex-col md:flex-row md:items-center md:justify-between gap-2 p-4">
+    <a href="#hero" class="font-display text-marca-900 text-2xl hover:opacity-70 focus-visible:outline-2 focus-visible:outline-marca-500 focus-visible:outline-offset-2">Miolo</a>
     <nav aria-label="Principal">
-      <ul>
-        <li><a href="#hero">O evento</a></li>
-        <li><a href="#">Ingressos</a></li>
-        <li><a href="#rodape">Contato</a></li>
+      <ul class="flex flex-col md:flex-row gap-4 md:gap-8 font-corpo text-marca-900">
+        <li><a href="#hero" class="hover:text-marca-500 focus-visible:outline-2 focus-visible:outline-marca-500 focus-visible:outline-offset-2">O evento</a></li>
+        <li><a href="#" class="hover:text-marca-500 focus-visible:outline-2 focus-visible:outline-marca-500 focus-visible:outline-offset-2">Ingressos</a></li>
+        <li><a href="#rodape" class="hover:text-marca-500 focus-visible:outline-2 focus-visible:outline-marca-500 focus-visible:outline-offset-2">Contato</a></li>
       </ul>
     </nav>
-    <a href="#">Garantir ingresso</a>
+    <a href="#"  class="bg-marca-500 text-marca-50 font-corpo font-bold rounded-card px-4 py-2 text-center hover:bg-marca-900 focus-visible:outline-2 focus-visible:outline-marca-900 focus-visible:outline-offset-2">Garantir ingresso</a>
   </header>
 
   <main>
@@ -89,7 +86,7 @@
   </main>
 
   <footer id="rodape">
-    <p>Nome do Evento</p>
+    <p>Miolo</p>
     <nav aria-label="Rodapé">
       <ul>
         <li><a href="#">Ingressos</a></li>
